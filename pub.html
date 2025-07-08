@@ -74,6 +74,10 @@
 		ul.a {list-style-type: square;
 		padding: 0px 30px; }
 
+		  h2 + ul {
+		    display: none;
+		  }
+
 	</style>
 	<style type="text/css" media="print">
 		body {
@@ -158,5 +162,31 @@
 		<li><u><b>M. Minowa</b></u>, S. Sugiyama, D.Sakakibara and T. Sawagaki (2015), <font color='blue'>Contrasting Glacier Variations of Glaciar Perito Moreno and Glaciar Ameghino, Southern Patagonia Icefield</font>. <i>Annals of Glaciology</i>, <b>56</b>(70), 26–32, doi:10.3189/2015AoG70A020 <a href="https://drive.google.com/file/d/1Yzt5CQsdSugpIwnUEH46vwP2c0zfJcvf/view?usp=sharing"><img src="icon_pdf.gif" alt="pdf"></a></li>
 	</ul>
 	</div>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all h2 elements
+  var headers = document.querySelectorAll("h2");
+
+  headers.forEach(function(header) {
+    // Find the next sibling element after h2
+    var next = header.nextElementSibling;
+
+    // Add click event to h2
+    header.style.cursor = "pointer"; // Show pointer on hover
+
+    header.addEventListener("click", function() {
+      // Toggle display
+      if (next && next.tagName === "UL") {
+        if (next.style.display === "none") {
+          next.style.display = "block";
+        } else {
+          next.style.display = "none";
+        }
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
