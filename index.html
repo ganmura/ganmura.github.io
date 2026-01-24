@@ -37,6 +37,27 @@
 			border-bottom: none;
 			margin-top: 0;
 			}	
+		#students {
+		  display: flex;
+		  gap: 1.5em;
+		}
+		
+		#students .left {
+		  width: 70%;
+		}
+		
+		#students .right {
+		  width: 30%;
+		  text-align: center;
+		}
+		
+		.student-photo {
+		  width: 100%;
+		  max-width: 220px;
+		  border: 1px solid #999;
+		  padding: 3px;
+		  background-color: #FFF;
+		}
 		.date {
 			float:right;
 			font-size:.7em;
@@ -99,9 +120,23 @@
 			
     		<br></p>
 	<h1>学生募集</h1>
-	上記の研究内容にピンと来たそこのあなた，一緒に氷河の変動メカニズムを研究してみませんか？研究室訪問，メールでのお問合せ歓迎です．入学試験に関する詳細は環境科学院のホームページを参照ください．東京，大阪，札幌において入試説明会も実施しています．<br /> 
-	南極氷床の変動について新しいプロジェクトが始まりました（2024-2029）．一緒に研究がしてみたい方ご連絡下さい．<br /> 
-	<a href="https://www.ees.hokudai.ac.jp/?page_id=2707" style="color:rgb(0, 0, 0);">大学院 環境科学院</a> / <a href="https://sites.google.com/site/courseincryosphere/" style="color:rgb(0, 0, 0);">雪氷寒冷圏科学コース</a> / <a href="https://www.jsps.go.jp/j-pd/" style="color:rgb(0, 0, 0);">JSPS特別研究員</a>
+	<div id="students">
+  <!-- 左：説明文 -->
+  <div class="left">
+    上記の研究内容にピンと来たそこのあなた，一緒に氷河の変動メカニズムを研究してみませんか？研究室訪問，メールでのお問合せ歓迎です．入学試験に関する詳細は環境科学院のホームページを参照ください．東京，大阪，札幌において入試説明会も実施しています．<br /><br />
+    南極氷床の変動について新しいプロジェクトが始まりました（2024-2029）．一緒に研究がしてみたい方ご連絡下さい．<br /><br />
+    <a href="https://www.ees.hokudai.ac.jp/?page_id=2707">大学院 環境科学院</a> / 
+    <a href="https://sites.google.com/site/courseincryosphere/">雪氷寒冷圏科学コース</a> / 
+    <a href="https://www.jsps.go.jp/j-pd/">JSPS特別研究員</a>
+  </div>
+
+  <!-- 右：写真 -->
+  <div class="right">
+    <img src="recrute.png" alt="Field work photo" class="student-photo" />
+  </div>
+
+</div>
+	
 	<h1>連絡先</h1>
 	住所:　北海道大学低温科学研究所311室<br /><br />
 	TEL: 011-706-7352<br /><br />
