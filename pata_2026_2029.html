@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Optional: Makes the image fill the full screen height */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fills the area without stretching */
+            z-index: -1;
+        }
+
+        /* Dark overlay to make text pop */
+        .hero-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive font sizes using Viewport Width (vw) */
+        .hero-text h1 {
+            font-size: 6vw; 
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .hero-text p {
+            font-size: 2vw;
+            font-weight: 200;
+            width: 70%;       /* Occupy 70% of the hero area */
+   	    margin-left: auto; 
+    	    margin-right: auto; /* These two lines center the paragraph */
+        }
+
+        /* Optional: Keeps font from getting TOO small on tiny phones */
+        @media (max-width: 600px) {
+            .hero-text h1 { font-size: 8vw; }
+            .hero-text p { font-size: 3vw; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-container">
+        <img src="./img/spi_traverse.JPG" alt="Nature Landscape" class="hero-image">
+        
+        <div class="hero-text">
+            <h1>パタゴニアの氷河変動</h1>
+            <p>カービング氷河を含む流域での水循環変動について研究活動を行います．スキー遠征を計画中です．興味がある方ご連絡ください．</p>
+        </div>
+    </div>
+
+</body>
+</html>
